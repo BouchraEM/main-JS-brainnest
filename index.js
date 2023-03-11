@@ -2,9 +2,9 @@ function computerPlay() {
   const options = ["rock", "paper", "scissors"];
   return options[Math.floor(Math.random() * options.length)];
 }
-console.log(computerPlay());
 
 function playRound(playerSelection, computerSelection) {
+  let answerPlayerSelection = prompt("Enter rock, scissors or paper");
   playerSelection = playerSelection.toLowerCase();
 
   const options = {
@@ -21,6 +21,8 @@ function playRound(playerSelection, computerSelection) {
     return `You Lose! ${computerSelection} beats ${playerSelection}`;
   }
 }
-const playerSelection = `scissors`;
+
 const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+console.log(computerPlay());
+console.log(answerPlayerSelection);
+console.log(playRound(answerPlayerSelection, computerSelection));
