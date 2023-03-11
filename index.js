@@ -4,7 +4,6 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  let answerPlayerSelection = prompt("Enter rock, scissors or paper");
   playerSelection = playerSelection.toLowerCase();
 
   const options = {
@@ -21,8 +20,8 @@ function playRound(playerSelection, computerSelection) {
     return `You Lose! ${computerSelection} beats ${playerSelection}`;
   }
 }
-
+const playerSelection = `scissors`;
 const computerSelection = computerPlay();
 console.log(computerPlay());
-console.log(answerPlayerSelection);
-console.log(playRound(answerPlayerSelection, computerSelection));
+console.log(playerSelection);
+console.log(playRound(playerSelection, computerSelection));
